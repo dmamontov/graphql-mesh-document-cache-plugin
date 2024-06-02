@@ -16,7 +16,7 @@ export default function useCacheDocument(
 
     return {
         onParams({ params, setParams }) {
-            if (!params.variables) {
+            if (!params.variables || !params.query) {
                 return;
             }
 
